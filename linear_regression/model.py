@@ -14,6 +14,11 @@ class LinearRegression:
 
                 dw += error * X[i]
                 db += error
+            dw /= n 
+            db /= n
+            self.w -= lr * dw
+            self.b -= lr * db
+
     def predict(self, X):
         preds = []
         for x in X:
