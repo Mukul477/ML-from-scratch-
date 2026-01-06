@@ -5,6 +5,15 @@ class LinearRegression:
 
     def fit(self, X, y, lr=0.01, epochs=100):
         n = len(X)
+        for _ in range(epochs):
+            dw = 0.0
+            db = 0.0
+            for i in range(n):
+                y_pred = self.w * X[i] + self.b
+                error = y_pred - y[i]
+
+                dw += error * X[i]
+                db += error
     def predict(self, X):
         preds = []
         for x in X:
