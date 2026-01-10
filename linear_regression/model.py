@@ -1,3 +1,4 @@
+
 class LinearRegression:
     def __init__(self):
         self.w = 0.0
